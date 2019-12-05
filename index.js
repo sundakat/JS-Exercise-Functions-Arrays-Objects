@@ -233,9 +233,16 @@ function getModelYears(carArray) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(carArray, maxYear) {
+  let newCarArray = []
+  for (let i = 0; i < carArray.length; i++) {
+    if (carArray[i].car_year <= maxYear) {
+      newCarArray.push(carArray[i])
+    }
+  }
+  return newCarArray;
 }
+
 
 /**
  * ### Challenge `getGermanCars`
